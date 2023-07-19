@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --bg-color-primary: #8E9AAF;
+    --bg-color-secondary: #CBC0D3;
+    --bg-color-tertiary: #EFF1FF;
+    --bg-color-span: #FEEAFA;
+    --tx-color-primary: #FFF;
+    --tx-color-secondary: #23053A;
+    --tx-color-tertiary: #4A4E69;
+    font-size: 62.5%;
+}
+
+.app {
+    font-family: 'Staatliches', 'cursive';
+    font-size: 1.6rem;
+    max-width: 39rem;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--bg-color-primary);
+    padding: 3.2rem 0 3.6rem;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--tx-color-primary);
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 3.4rem;
+    padding: .8rem 0 .8rem;
+}
+
+.logo {
+    background-color: var(--bg-color-secondary);
+    margin-top: 3rem;
+}
+
+main {
+    background-color: var(--bg-color-tertiary);
+    padding: 1.4rem 3.2rem 6rem;
+    display: grid;
+    gap: 3.2rem;
+}
+
+main p {
+    color: var(--tx-color-secondary);
+    font-family: 'Palanquin', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5rem; 
+    margin-bottom: 3.2rem;
+}
+
+.card {
+    position: relative; 
+}
+
+.card img {
+    object-fit: cover;
+    animation: downtop 1s backwards;
+    width: 100%;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card span {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    color: var(--tx-color-tertiary);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.4rem;
+    background-color: var(--bg-color-span);
+    border-radius: 2rem;
+    padding: 0 2.4rem;
+    width: fit-content;
+    height: 3.5rem;
+    animation: topdown 2s;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
